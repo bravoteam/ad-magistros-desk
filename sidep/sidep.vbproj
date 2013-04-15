@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83848F56-8A61-41B4-8509-26B0BDA01E6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>sidep.My.MyApplication</StartupObject>
+    <RootNamespace>sidep</RootNamespace>
+    <AssemblyName>sidep</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>sidep.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>sidep.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="modelos\funciones.vb" />
+    <Compile Include="modelos\funcionesLocales.vb" />
+    <Compile Include="modelos\modelos.vb" />
+    <Compile Include="modelos\procedimientos.vb" />
+    <Compile Include="modelos\variables.vb" />
+    <Compile Include="PlantillaPersonal\addPersonal.Designer.vb">
+      <DependentUpon>addPersonal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\addPersonal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\agregarCtFrm.Designer.vb">
+      <DependentUpon>agregarCtFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\agregarCtFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\buscarDireccion.Designer.vb">
+      <DependentUpon>buscarDireccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\buscarDireccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\frmBuscar.designer.vb">
+      <DependentUpon>frmBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\frmBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\frmBuscarPersonal.Designer.vb">
+      <DependentUpon>frmBuscarPersonal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\frmBuscarPersonal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\frmBuscarCT.Designer.vb">
+      <DependentUpon>frmBuscarCT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\frmBuscarCT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\horarioIsenco.Designer.vb">
+      <DependentUpon>horarioIsenco.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\horarioIsenco.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\busquedaPersonal.Designer.vb">
+      <DependentUpon>busquedaPersonal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\busquedaPersonal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\ImpresionCargaHoraria.Designer.vb">
+      <DependentUpon>ImpresionCargaHoraria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\ImpresionCargaHoraria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\ImpresionCT_Desgloce.Designer.vb">
+      <DependentUpon>ImpresionCT_Desgloce.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\ImpresionCT_Desgloce.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\ImpresionHorarioCT.Designer.vb">
+      <DependentUpon>ImpresionHorarioCT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\ImpresionHorarioCT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\imprimirPlantillaFrm.Designer.vb">
+      <DependentUpon>imprimirPlantillaFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\imprimirPlantillaFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\LoginForm1.Designer.vb">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\LoginForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\materiasFrm.designer.vb">
+      <DependentUpon>materiasFrm.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PlantillaPersonal\materiasFrm.vb">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PlantillaPersonal\menuPrincipalFrm.designer.vb">
+      <DependentUpon>menuPrincipalFrm.vb</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PlantillaPersonal\menuPrincipalFrm.vb">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="PlantillaPersonal\usuariosFrm.Designer.vb">
+      <DependentUpon>usuariosFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlantillaPersonal\usuariosFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="plantillas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>plantillas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SomeStuff.vb" />
+    <Compile Include="PlantillaPersonal\clasesPlantillaPersonal.vb" />
+    <Compile Include="PlantillaPersonal\frmPlantillaPersonal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlantillaPersonal\frmPlantillaPersonal.Designer.vb">
+      <DependentUpon>frmPlantillaPersonal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PlantillaPersonal\addPersonal.resx">
+      <DependentUpon>addPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\agregarCtFrm.resx">
+      <DependentUpon>agregarCtFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\buscarDireccion.resx">
+      <DependentUpon>buscarDireccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\frmBuscar.resx">
+      <DependentUpon>frmBuscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\frmBuscarPersonal.resx">
+      <DependentUpon>frmBuscarPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\frmBuscarCT.resx">
+      <DependentUpon>frmBuscarCT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\frmPlantillaPersonal.resx">
+      <DependentUpon>frmPlantillaPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\horarioIsenco.resx">
+      <DependentUpon>horarioIsenco.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\busquedaPersonal.resx">
+      <DependentUpon>busquedaPersonal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\ImpresionCargaHoraria.resx">
+      <DependentUpon>ImpresionCargaHoraria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\ImpresionCT_Desgloce.resx">
+      <DependentUpon>ImpresionCT_Desgloce.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\ImpresionHorarioCT.resx">
+      <DependentUpon>ImpresionHorarioCT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\imprimirPlantillaFrm.resx">
+      <DependentUpon>imprimirPlantillaFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\LoginForm1.resx">
+      <DependentUpon>LoginForm1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\menuPrincipalFrm.resx">
+      <DependentUpon>menuPrincipalFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlantillaPersonal\usuariosFrm.resx">
+      <DependentUpon>usuariosFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\cargaHorariaRpt.rdlc" />
+    <EmbeddedResource Include="reportes\Copy of plantilla.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\HORARIOCT.rdlc" />
+    <EmbeddedResource Include="reportes\HORARIOCT_DESGLOCE.rdlc" />
+    <EmbeddedResource Include="reportes\plantilla.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\plantillaNivel.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\001_06.png" />
+    <Content Include="img\001_35.png" />
+    <Content Include="img\001_37.png" />
+    <Content Include="img\001_59.png" />
+    <Content Include="img\16 %28Binoculars next%29.ico" />
+    <Content Include="img\16 %28Clear%29.ico" />
+    <Content Include="img\16 %28Db delete%29.ico" />
+    <Content Include="img\16 %28Exit%29.ico" />
+    <Content Include="img\16 %28File add%29.ico" />
+    <Content Include="img\16 %28Print%29.ico" />
+    <Content Include="img\16 %28Save%29.ico" />
+    <Content Include="img\16 %28Spelling%29.ico" />
+    <None Include="reportes\LOGO.jpg" />
+    <None Include="Resources\16 %28Print%29.ico" />
+    <None Include="plantillas.xsc">
+      <DependentUpon>plantillas.xsd</DependentUpon>
+    </None>
+    <None Include="plantillas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>plantillas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="plantillas.xss">
+      <DependentUpon>plantillas.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\16 %28Card edit%29.ico" />
+    <None Include="Resources\16 %28Spelling%29.ico" />
+    <None Include="Resources\16 %28Binoculars next%29.ico" />
+    <None Include="Resources\16 %28Exit%29.ico" />
+    <None Include="img\plus.png" />
+    <None Include="img\edit_remove.png" />
+    <Content Include="img\guardar.jpg" />
+    <Content Include="img\Logo ISENCO.jpg" />
+    <Content Include="img\Logo ISENCO1.jpg" />
+    <Content Include="img\LOGO SE a colores.jpg" />
+    <Content Include="img\LOGO SE a colores1.jpg" />
+    <Content Include="img\Logo.ico" />
+    <Content Include="img\lupa.jpg" />
+    <Content Include="img\nuevo.jpg" />
+    <Content Include="img\print.ico" />
+    <Content Include="img\salir.jpg" />
+    <Content Include="img\salir2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\datosCompartidos\datosCompartidos.vbproj">
+      <Project>{706CCABE-14F4-46DB-A5FB-AB347B814559}</Project>
+      <Name>datosCompartidos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

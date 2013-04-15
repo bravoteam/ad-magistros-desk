@@ -1,0 +1,230 @@
+E:\dep\repo\sidep\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\dep\repo\sidep\obj\x86\Debug\sidep.FrmBuscar.resources
+E:\dep\repo\sidep\obj\x86\Debug\sidep.CT.resources
+E:\dep\repo\sidep\obj\x86\Debug\sidep.Trabajador.resources
+E:\dep\repo\sidep\obj\x86\Debug\sidep.frmPlantillaPersonal.resources
+E:\dep\repo\sidep\obj\x86\Debug\sidep.Resources.resources
+E:\dep\repo\sidep\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\dep\repo\sidep\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\dep\repo\sidep\bin\Debug\sidep.exe
+E:\dep\repo\sidep\bin\Debug\sidep.pdb
+E:\dep\repo\sidep\bin\Debug\sidep.xml
+E:\dep\repo\sidep\obj\x86\Debug\sidep.exe
+E:\dep\repo\sidep\obj\x86\Debug\sidep.xml
+E:\dep\repo\sidep\obj\x86\Debug\sidep.pdb
+E:\dep\repo\sidep\obj\x86\Debug\sidep.frmBuscarCT.resources
+E:\dep\repo\sidep\obj\x86\Debug\sidep.frmBuscarPersonal.resources
+C:\Users\Public\side_carlos\sidep\obj\x86\Debug\sidep.exe
+C:\Users\Public\side_carlos\sidep\obj\x86\Debug\sidep.xml
+C:\Users\Public\side_carlos\sidep\obj\x86\Debug\sidep.pdb
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\reportes\plantilla.rdlc
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\PlantillaPersonal\personalFrm.resx
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\PlantillaPersonal\personalFrm.Designer.vb
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\PlantillaPersonal\personalFrm.vb
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\sidep.exe.config
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\sidep.exe
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\sidep.pdb
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\sidep.xml
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\datosCompartidos.exe
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\datosCompartidos.pdb
+D:\Documents\Visual Studio 2010\Projects\sidep\bin\Debug\datosCompartidos.xml
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.addPersonal.resources
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.frmBuscarAlumbo.resources
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.frmBuscarPersonal.resources
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.frmBuscarCT.resources
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.frmPlantillaPersonal.resources
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.Resources.resources
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.ImpresionFrm.resources
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.personalFrm.resources
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\RdlCompile.cache
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\RdlCompile.compiled
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.exe
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.xml
+D:\Documents\Visual Studio 2010\Projects\sidep\obj\x86\Debug\sidep.pdb
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.addPersonal.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.buscarDireccion.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.frmBuscar.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.frmBuscarPersonal.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.frmBuscarCT.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.frmPlantillaPersonal.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.Resources.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.ImpresionFrm.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\RdlCompile.cache
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\RdlCompile.compiled
+D:\Documents\GitHub\sidep\sidep\bin\Debug\sidep.exe.config
+D:\Documents\GitHub\sidep\sidep\bin\Debug\reportes\plantilla.rdlc
+D:\Documents\GitHub\sidep\sidep\bin\Debug\sidep.exe
+D:\Documents\GitHub\sidep\sidep\bin\Debug\sidep.pdb
+D:\Documents\GitHub\sidep\sidep\bin\Debug\sidep.xml
+D:\Documents\GitHub\sidep\sidep\bin\Debug\datosCompartidos.exe
+D:\Documents\GitHub\sidep\sidep\bin\Debug\datosCompartidos.pdb
+D:\Documents\GitHub\sidep\sidep\bin\Debug\datosCompartidos.xml
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.exe
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.xml
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.pdb
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.LoginForm1.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.menuPrincipalFrm.resources
+D:\Documents\GitHub\sidep\sidep\obj\x86\Debug\sidep.materiasFrm.resources
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\sidep.exe.config
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.exe
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.xml
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.pdb
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.addPersonal.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.buscarDireccion.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscar.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarPersonal.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarCT.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.frmPlantillaPersonal.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.Resources.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.ImpresionFrm.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.LoginForm1.resources
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\reportes\plantilla.rdlc
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.designer.vb
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.vb
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.designer.vb
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.vb
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\sidep.exe
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\sidep.pdb
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\sidep.xml
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\datosCompartidos.exe
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\datosCompartidos.pdb
+D:\Documents\GitHub\plantillasSidep\sidep\bin\Debug\datosCompartidos.xml
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.cache
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.compiled
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\reportes\plantilla.rdlc
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.designer.vb
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.vb
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.designer.vb
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.vb
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\sidep.exe.config
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\sidep.exe
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\sidep.pdb
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\sidep.xml
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\datosCompartidos.exe
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\datosCompartidos.pdb
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\datosCompartidos.xml
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.addPersonal.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.buscarDireccion.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscar.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarPersonal.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarCT.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.frmPlantillaPersonal.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.Resources.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.ImpresionFrm.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.LoginForm1.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.menuPrincipalFrm.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.cache
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.compiled
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.exe
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.xml
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.pdb
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\sidep.exe.config
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.exe
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.xml
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.pdb
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\reportes\plantilla.rdlc
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.designer.vb
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.vb
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.designer.vb
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.vb
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\sidep.exe
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\sidep.pdb
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\sidep.xml
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\datosCompartidos.exe
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\datosCompartidos.pdb
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\bin\Debug\datosCompartidos.xml
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\ResolveAssemblyReference.cache
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.addPersonal.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.buscarDireccion.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscar.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarPersonal.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarCT.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.frmPlantillaPersonal.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.Resources.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.ImpresionFrm.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.LoginForm1.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\sidep.menuPrincipalFrm.resources
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\GenerateResource.read.1.tlog
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\GenerateResource.write.1.tlog
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.cache
+\\server\Users\usuario\Documents\SIDEP\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.compiled
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\sidep.exe.config
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.exe
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.xml
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.pdb
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\reportes\plantilla.rdlc
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.designer.vb
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.vb
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.designer.vb
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.vb
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\sidep.exe
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\sidep.pdb
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\sidep.xml
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\datosCompartidos.exe
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\datosCompartidos.pdb
+C:\Users\pepe\Documents\plantillasSidep\sidep\bin\Debug\datosCompartidos.xml
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.addPersonal.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.buscarDireccion.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscar.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarPersonal.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarCT.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.frmPlantillaPersonal.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.Resources.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.ImpresionFrm.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.LoginForm1.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\sidep.menuPrincipalFrm.resources
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.cache
+C:\Users\pepe\Documents\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.compiled
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.menuPrincipalFrm.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.horarioIsenco.resources
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.vbprojResolveAssemblyReference.cache
+D:\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.vbproj.GenerateResource.Cache
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\sidep.exe.config
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.exe
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.xml
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.pdb
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\reportes\plantilla.rdlc
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.designer.vb
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\materiasFrm.vb
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.designer.vb
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\PlantillaPersonal\menuPrincipalFrm.vb
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\sidep.exe
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\sidep.pdb
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\sidep.xml
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\datosCompartidos.exe
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\datosCompartidos.pdb
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\datosCompartidos.xml
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.vbprojResolveAssemblyReference.cache
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.addPersonal.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.buscarDireccion.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscar.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarPersonal.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.frmBuscarCT.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.frmPlantillaPersonal.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.Resources.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.horarioIsenco.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.LoginForm1.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.menuPrincipalFrm.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.vbproj.GenerateResource.Cache
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.cache
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\RdlCompile.compiled
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.busquedaPersonal.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.imprimirPlantillaFrm.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.usuariosFrm.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.agregarCtFrm.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\bin\Debug\reportes\Copy of plantilla.rdlc
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.ImpresionCargaHoraria.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.ImpresionCT_Desgloce.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\sidep\obj\x86\Debug\sidep.ImpresionHorarioCT.resources

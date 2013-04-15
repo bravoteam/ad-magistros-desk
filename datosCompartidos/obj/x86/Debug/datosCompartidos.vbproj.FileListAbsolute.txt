@@ -1,0 +1,97 @@
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.exe
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.pdb
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.xml
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
+D:\Documents\ISENCO ALL LAPTOP\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.frmBuscar.resources
+F:\VB PROJECTS\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.exe
+F:\VB PROJECTS\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.pdb
+F:\VB PROJECTS\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.xml
+F:\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+F:\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+F:\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+F:\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.exe
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.pdb
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.xml
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+D:\Documents\Visual Studio 2010\Projects\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.exe
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.pdb
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\bin\Debug\datosCompartidos.xml
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+D:\Desktop\VB PROJECTS\IsencoProject\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\bin\Debug\datosCompartidos.exe
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\bin\Debug\datosCompartidos.pdb
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\bin\Debug\datosCompartidos.xml
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+D:\Desktop\VB PROJECTS\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\bin\Debug\datosCompartidos.exe
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\bin\Debug\datosCompartidos.pdb
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\bin\Debug\datosCompartidos.xml
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+D:\Documents\GitHub\IsencoProject\IsencoProject Modificando\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
+D:\Documents\GitHub\sidep\datosCompartidos\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents\GitHub\sidep\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+D:\Documents\GitHub\sidep\datosCompartidos\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Documents\GitHub\sidep\datosCompartidos\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Documents\GitHub\sidep\datosCompartidos\bin\Debug\datosCompartidos.exe
+D:\Documents\GitHub\sidep\datosCompartidos\bin\Debug\datosCompartidos.pdb
+D:\Documents\GitHub\sidep\datosCompartidos\bin\Debug\datosCompartidos.xml
+D:\Documents\GitHub\sidep\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+D:\Documents\GitHub\sidep\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+D:\Documents\GitHub\sidep\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
+D:\Documents\GitHub\plantillasSidep\datosCompartidos\bin\Debug\datosCompartidos.exe
+D:\Documents\GitHub\plantillasSidep\datosCompartidos\bin\Debug\datosCompartidos.pdb
+D:\Documents\GitHub\plantillasSidep\datosCompartidos\bin\Debug\datosCompartidos.xml
+D:\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+D:\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+D:\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+D:\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\bin\Debug\datosCompartidos.exe
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\bin\Debug\datosCompartidos.pdb
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\bin\Debug\datosCompartidos.xml
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+C:\Users\usuario\Documents\SIDEP\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
+D:\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.vbproj.GenerateResource.Cache
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\datosCompartidos\bin\Debug\datosCompartidos.exe
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\datosCompartidos\bin\Debug\datosCompartidos.pdb
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\datosCompartidos\bin\Debug\datosCompartidos.xml
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.Resources.resources
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.vbproj.GenerateResource.Cache
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.exe
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.xml
+C:\Users\estebanbt\Documents\GitHub\plantillasSidep\datosCompartidos\obj\x86\Debug\datosCompartidos.pdb
