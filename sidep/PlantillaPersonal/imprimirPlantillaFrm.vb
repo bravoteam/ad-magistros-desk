@@ -4,6 +4,8 @@ Imports System.IO
 Public Class imprimirPlantillaFrm
 
     Private Sub imprimirPlantillaFrm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'plantillas.estadisticasMaestros' table. You can move, or remove it, as needed.
+        Me.estadisticasMaestrosTableAdapter.Fill(Me.plantillas.estadisticasMaestros, variables.idCCT)
         'TODO: This line of code loads data into the 'plantillas.plantilla' table. You can move, or remove it, as needed.
         Me.plantillaTableAdapter.Fill(Me.plantillas.plantilla, variables.idCCT)
         'TODO: This line of code loads data into the 'plantillas.estadisticas_CCT' table. You can move, or remove it, as needed.

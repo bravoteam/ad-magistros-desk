@@ -31,6 +31,8 @@ Partial Public Class plantillas
     
     Private tablehorarioCT As horarioCTDataTable
     
+    Private tableestadisticasMaestros As estadisticasMaestrosDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -68,6 +70,9 @@ Partial Public Class plantillas
             End If
             If (Not (ds.Tables("horarioCT")) Is Nothing) Then
                 MyBase.Tables.Add(New horarioCTDataTable(ds.Tables("horarioCT")))
+            End If
+            If (Not (ds.Tables("estadisticasMaestros")) Is Nothing) Then
+                MyBase.Tables.Add(New estadisticasMaestrosDataTable(ds.Tables("estadisticasMaestros")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -113,6 +118,16 @@ Partial Public Class plantillas
     Public ReadOnly Property horarioCT() As horarioCTDataTable
         Get
             Return Me.tablehorarioCT
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property estadisticasMaestros() As estadisticasMaestrosDataTable
+        Get
+            Return Me.tableestadisticasMaestros
         End Get
     End Property
     
@@ -192,6 +207,9 @@ Partial Public Class plantillas
             If (Not (ds.Tables("horarioCT")) Is Nothing) Then
                 MyBase.Tables.Add(New horarioCTDataTable(ds.Tables("horarioCT")))
             End If
+            If (Not (ds.Tables("estadisticasMaestros")) Is Nothing) Then
+                MyBase.Tables.Add(New estadisticasMaestrosDataTable(ds.Tables("estadisticasMaestros")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -242,6 +260,12 @@ Partial Public Class plantillas
                 Me.tablehorarioCT.InitVars
             End If
         End If
+        Me.tableestadisticasMaestros = CType(MyBase.Tables("estadisticasMaestros"),estadisticasMaestrosDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableestadisticasMaestros) Is Nothing) Then
+                Me.tableestadisticasMaestros.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -258,6 +282,8 @@ Partial Public Class plantillas
         MyBase.Tables.Add(Me.tableestadisticas_CCT)
         Me.tablehorarioCT = New horarioCTDataTable()
         MyBase.Tables.Add(Me.tablehorarioCT)
+        Me.tableestadisticasMaestros = New estadisticasMaestrosDataTable()
+        MyBase.Tables.Add(Me.tableestadisticasMaestros)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -275,6 +301,12 @@ Partial Public Class plantillas
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializehorarioCT() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeestadisticasMaestros() As Boolean
         Return false
     End Function
     
@@ -345,6 +377,9 @@ Partial Public Class plantillas
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub horarioCTRowChangeEventHandler(ByVal sender As Object, ByVal e As horarioCTRowChangeEvent)
     
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub estadisticasMaestrosRowChangeEventHandler(ByVal sender As Object, ByVal e As estadisticasMaestrosRowChangeEvent)
+    
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
@@ -410,6 +445,10 @@ Partial Public Class plantillas
         Private columncarga As Global.System.Data.DataColumn
         
         Private columnAgrupacion As Global.System.Data.DataColumn
+        
+        Private columngrupoP As Global.System.Data.DataColumn
+        
+        Private columngradoP As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -679,6 +718,22 @@ Partial Public Class plantillas
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property grupoPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columngrupoP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property gradoPColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columngradoP
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -743,9 +798,11 @@ Partial Public Class plantillas
                     ByVal grupo As String,  _
                     ByVal grado As String,  _
                     ByVal carga As Integer,  _
-                    ByVal Agrupacion As String) As plantillaRow
+                    ByVal Agrupacion As String,  _
+                    ByVal grupoP As String,  _
+                    ByVal gradoP As String) As plantillaRow
             Dim rowplantillaRow As plantillaRow = CType(Me.NewRow,plantillaRow)
-            Dim columnValuesArray() As Object = New Object() {Apellido_Paterno, Apellido_Materno, CCT, Nombre, Ficha, RFC, CURP, Domicilio, numExt, numInt, Colonia, Municipio, Estado, Telefono, Celular, CT, Nivel, Turno, Materia, Horas, Puesto, Funcion, HD, HA, Nothing, grupo, grado, carga, Agrupacion}
+            Dim columnValuesArray() As Object = New Object() {Apellido_Paterno, Apellido_Materno, CCT, Nombre, Ficha, RFC, CURP, Domicilio, numExt, numInt, Colonia, Municipio, Estado, Telefono, Celular, CT, Nivel, Turno, Materia, Horas, Puesto, Funcion, HD, HA, Nothing, grupo, grado, carga, Agrupacion, grupoP, gradoP}
             rowplantillaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowplantillaRow)
             Return rowplantillaRow
@@ -797,6 +854,8 @@ Partial Public Class plantillas
             Me.columngrado = MyBase.Columns("grado")
             Me.columncarga = MyBase.Columns("carga")
             Me.columnAgrupacion = MyBase.Columns("Agrupacion")
+            Me.columngrupoP = MyBase.Columns("grupoP")
+            Me.columngradoP = MyBase.Columns("gradoP")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -860,6 +919,10 @@ Partial Public Class plantillas
             MyBase.Columns.Add(Me.columncarga)
             Me.columnAgrupacion = New Global.System.Data.DataColumn("Agrupacion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnAgrupacion)
+            Me.columngrupoP = New Global.System.Data.DataColumn("grupoP", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columngrupoP)
+            Me.columngradoP = New Global.System.Data.DataColumn("gradoP", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columngradoP)
             Me.columnApellido_Paterno.MaxLength = 55
             Me.columnApellido_Materno.MaxLength = 55
             Me.columnCCT.AllowDBNull = false
@@ -902,6 +965,10 @@ Partial Public Class plantillas
             Me.columncarga.ReadOnly = true
             Me.columnAgrupacion.ReadOnly = true
             Me.columnAgrupacion.MaxLength = 100
+            Me.columngrupoP.ReadOnly = true
+            Me.columngrupoP.MaxLength = 50
+            Me.columngradoP.ReadOnly = true
+            Me.columngradoP.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1789,6 +1856,346 @@ Partial Public Class plantillas
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class estadisticasMaestrosDataTable
+        Inherits Global.System.Data.TypedTableBase(Of estadisticasMaestrosRow)
+        
+        Private columngrados As Global.System.Data.DataColumn
+        
+        Private columngrupos As Global.System.Data.DataColumn
+        
+        Private columnngrupos As Global.System.Data.DataColumn
+        
+        Private columnegrados As Global.System.Data.DataColumn
+        
+        Private columnNombre As Global.System.Data.DataColumn
+        
+        Private columnApellido_Paterno As Global.System.Data.DataColumn
+        
+        Private columnApellido_Materno As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "estadisticasMaestros"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property gradosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columngrados
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property gruposColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columngrupos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ngruposColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnngrupos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property egradosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnegrados
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NombreColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombre
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Apellido_PaternoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnApellido_Paterno
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Apellido_MaternoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnApellido_Materno
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As estadisticasMaestrosRow
+            Get
+                Return CType(Me.Rows(index),estadisticasMaestrosRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event estadisticasMaestrosRowChanging As estadisticasMaestrosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event estadisticasMaestrosRowChanged As estadisticasMaestrosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event estadisticasMaestrosRowDeleting As estadisticasMaestrosRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event estadisticasMaestrosRowDeleted As estadisticasMaestrosRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddestadisticasMaestrosRow(ByVal row As estadisticasMaestrosRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddestadisticasMaestrosRow(ByVal grados As String, ByVal grupos As String, ByVal ngrupos As Long, ByVal egrados As String, ByVal Nombre As String, ByVal Apellido_Paterno As String, ByVal Apellido_Materno As String) As estadisticasMaestrosRow
+            Dim rowestadisticasMaestrosRow As estadisticasMaestrosRow = CType(Me.NewRow,estadisticasMaestrosRow)
+            Dim columnValuesArray() As Object = New Object() {grados, grupos, ngrupos, egrados, Nombre, Apellido_Paterno, Apellido_Materno}
+            rowestadisticasMaestrosRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowestadisticasMaestrosRow)
+            Return rowestadisticasMaestrosRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As estadisticasMaestrosDataTable = CType(MyBase.Clone,estadisticasMaestrosDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New estadisticasMaestrosDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columngrados = MyBase.Columns("grados")
+            Me.columngrupos = MyBase.Columns("grupos")
+            Me.columnngrupos = MyBase.Columns("ngrupos")
+            Me.columnegrados = MyBase.Columns("egrados")
+            Me.columnNombre = MyBase.Columns("Nombre")
+            Me.columnApellido_Paterno = MyBase.Columns("Apellido_Paterno")
+            Me.columnApellido_Materno = MyBase.Columns("Apellido_Materno")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columngrados = New Global.System.Data.DataColumn("grados", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columngrados)
+            Me.columngrupos = New Global.System.Data.DataColumn("grupos", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columngrupos)
+            Me.columnngrupos = New Global.System.Data.DataColumn("ngrupos", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnngrupos)
+            Me.columnegrados = New Global.System.Data.DataColumn("egrados", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnegrados)
+            Me.columnNombre = New Global.System.Data.DataColumn("Nombre", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombre)
+            Me.columnApellido_Paterno = New Global.System.Data.DataColumn("Apellido_Paterno", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnApellido_Paterno)
+            Me.columnApellido_Materno = New Global.System.Data.DataColumn("Apellido_Materno", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnApellido_Materno)
+            Me.columngrados.AllowDBNull = false
+            Me.columngrados.MaxLength = 50
+            Me.columngrupos.AllowDBNull = false
+            Me.columngrupos.MaxLength = 50
+            Me.columnngrupos.ReadOnly = true
+            Me.columnegrados.ReadOnly = true
+            Me.columnegrados.MaxLength = 50
+            Me.columnNombre.MaxLength = 250
+            Me.columnApellido_Paterno.MaxLength = 155
+            Me.columnApellido_Materno.MaxLength = 155
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewestadisticasMaestrosRow() As estadisticasMaestrosRow
+            Return CType(Me.NewRow,estadisticasMaestrosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New estadisticasMaestrosRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(estadisticasMaestrosRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.estadisticasMaestrosRowChangedEvent) Is Nothing) Then
+                RaiseEvent estadisticasMaestrosRowChanged(Me, New estadisticasMaestrosRowChangeEvent(CType(e.Row,estadisticasMaestrosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.estadisticasMaestrosRowChangingEvent) Is Nothing) Then
+                RaiseEvent estadisticasMaestrosRowChanging(Me, New estadisticasMaestrosRowChangeEvent(CType(e.Row,estadisticasMaestrosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.estadisticasMaestrosRowDeletedEvent) Is Nothing) Then
+                RaiseEvent estadisticasMaestrosRowDeleted(Me, New estadisticasMaestrosRowChangeEvent(CType(e.Row,estadisticasMaestrosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.estadisticasMaestrosRowDeletingEvent) Is Nothing) Then
+                RaiseEvent estadisticasMaestrosRowDeleting(Me, New estadisticasMaestrosRowChangeEvent(CType(e.Row,estadisticasMaestrosRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveestadisticasMaestrosRow(ByVal row As estadisticasMaestrosRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As plantillas = New plantillas()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "estadisticasMaestrosDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class plantillaRow
@@ -2228,6 +2635,36 @@ Partial Public Class plantillas
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property grupoP() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableplantilla.grupoPColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'grupoP' in table 'plantilla' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableplantilla.grupoPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property gradoP() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableplantilla.gradoPColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'gradoP' in table 'plantilla' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableplantilla.gradoPColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsApellido_PaternoNull() As Boolean
             Return Me.IsNull(Me.tableplantilla.Apellido_PaternoColumn)
         End Function
@@ -2536,6 +2973,30 @@ Partial Public Class plantillas
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetAgrupacionNull()
             Me(Me.tableplantilla.AgrupacionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsgrupoPNull() As Boolean
+            Return Me.IsNull(Me.tableplantilla.grupoPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetgrupoPNull()
+            Me(Me.tableplantilla.grupoPColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsgradoPNull() As Boolean
+            Return Me.IsNull(Me.tableplantilla.gradoPColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetgradoPNull()
+            Me(Me.tableplantilla.gradoPColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -2861,6 +3322,181 @@ Partial Public Class plantillas
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class estadisticasMaestrosRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableestadisticasMaestros As estadisticasMaestrosDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableestadisticasMaestros = CType(Me.Table,estadisticasMaestrosDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property grados() As String
+            Get
+                Return CType(Me(Me.tableestadisticasMaestros.gradosColumn),String)
+            End Get
+            Set
+                Me(Me.tableestadisticasMaestros.gradosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property grupos() As String
+            Get
+                Return CType(Me(Me.tableestadisticasMaestros.gruposColumn),String)
+            End Get
+            Set
+                Me(Me.tableestadisticasMaestros.gruposColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ngrupos() As Long
+            Get
+                Try 
+                    Return CType(Me(Me.tableestadisticasMaestros.ngruposColumn),Long)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ngrupos' in table 'estadisticasMaestros' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableestadisticasMaestros.ngruposColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property egrados() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableestadisticasMaestros.egradosColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'egrados' in table 'estadisticasMaestros' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableestadisticasMaestros.egradosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Nombre() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableestadisticasMaestros.NombreColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Nombre' in table 'estadisticasMaestros' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableestadisticasMaestros.NombreColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Apellido_Paterno() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableestadisticasMaestros.Apellido_PaternoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Apellido_Paterno' in table 'estadisticasMaestros' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableestadisticasMaestros.Apellido_PaternoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Apellido_Materno() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableestadisticasMaestros.Apellido_MaternoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Apellido_Materno' in table 'estadisticasMaestros' is DBNull"& _ 
+                            ".", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableestadisticasMaestros.Apellido_MaternoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsngruposNull() As Boolean
+            Return Me.IsNull(Me.tableestadisticasMaestros.ngruposColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetngruposNull()
+            Me(Me.tableestadisticasMaestros.ngruposColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsegradosNull() As Boolean
+            Return Me.IsNull(Me.tableestadisticasMaestros.egradosColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetegradosNull()
+            Me(Me.tableestadisticasMaestros.egradosColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNombreNull() As Boolean
+            Return Me.IsNull(Me.tableestadisticasMaestros.NombreColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNombreNull()
+            Me(Me.tableestadisticasMaestros.NombreColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsApellido_PaternoNull() As Boolean
+            Return Me.IsNull(Me.tableestadisticasMaestros.Apellido_PaternoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetApellido_PaternoNull()
+            Me(Me.tableestadisticasMaestros.Apellido_PaternoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsApellido_MaternoNull() As Boolean
+            Return Me.IsNull(Me.tableestadisticasMaestros.Apellido_MaternoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetApellido_MaternoNull()
+            Me(Me.tableestadisticasMaestros.Apellido_MaternoColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -2954,6 +3590,42 @@ Partial Public Class plantillas
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As horarioCTRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class estadisticasMaestrosRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As estadisticasMaestrosRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As estadisticasMaestrosRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As estadisticasMaestrosRow
             Get
                 Return Me.eventRow
             End Get
@@ -3127,6 +3799,8 @@ Namespace plantillasTableAdapters
             tableMapping.ColumnMappings.Add("grado", "grado")
             tableMapping.ColumnMappings.Add("carga", "carga")
             tableMapping.ColumnMappings.Add("Agrupacion", "Agrupacion")
+            tableMapping.ColumnMappings.Add("grupoP", "grupoP")
+            tableMapping.ColumnMappings.Add("gradoP", "gradoP")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -3134,7 +3808,7 @@ Namespace plantillasTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.sidep.My.MySettings.Default.SIDEPConnectionString
+            Me._connection.ConnectionString = Global.sidep.My.MySettings.Default.ISENCOConnectionString
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3148,43 +3822,43 @@ Namespace plantillasTableAdapters
                 "(CO.nombre, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         '') AS Colonia, MU.NOMBRE AS Municipio, E"& _ 
                 "S.NOMBRE AS Estado, P.Telefono, P.Celular, C.nombre AS CT, C.CCT, NI.descripcion"& _ 
                 " AS Nivel, T.descripcion AS Turno, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         ISNULL(M.materia, "& _ 
-                "'') AS Materia, isnull(H.grado,'') as grado, ISNULL(H.Grupo, '') AS grupo,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"    "& _ 
-                "                         (SELECT        COUNT(idMateria) AS Expr1"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
-                "                  FROM            horarios"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                               WHERE"& _ 
-                "        (idPlantilla = PL.idPlantilla) AND (idMateria = H.idMateria) AND (Grupo "& _ 
-                "= H.Grupo)) AS Horas, PL.HD, PL.HA, ISNULL(PU.descripcion, 'SIN PUESTO') "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
-                "                    AS Puesto, ISNULL(FU.Descripcion, 'NO ESPECIFICA') AS Funcio"& _ 
-                "n, isnull(M.horas,'') as carga,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         isnull(M.agrupacion,''"& _ 
-                ") as Agrupacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Personal AS P INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                     "& _ 
-                "    plantillas AS PL ON P.Id_Personal = PL.idPersonal INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
-                "           CT AS C ON C.IdCT = PL.idCCT INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         tur"& _ 
-                "nos AS T ON T.idTurno = C.idTurno LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         hora"& _ 
-                "rios AS H ON H.idPlantilla = PL.idPlantilla LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
-                "      materias AS M ON M.id_materia = H.idMateria LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
-                "            colonia AS CO ON CO.id_colonia = P.Id_Colonia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
-                "                    municipio AS MU ON MU.ID_MUNICIPIO = P.Id_Localidad LEFT OUT"& _ 
-                "ER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         estados AS ES ON ES.ID_ESTADO = MU.ID_ESTADO L"& _ 
-                "EFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         puestos AS PU ON PU.idPuesto = PL.idPue"& _ 
-                "sto LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         funciones AS FU ON FU.idFuncion = "& _ 
-                "PL.idFuncion LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         niveles AS NI ON NI.idNiv"& _ 
-                "el = C.idNivel"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (C.IdCT = @idCT)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY C.idNivel, PL.idPlantill"& _ 
-                "a, P.Ficha, ISNULL(P.RFC, ''), P.CURP, P.Apellido_Paterno, P.Apellido_Materno, P"& _ 
-                ".Nombre, P.Domicilio, P.numExt, P.numInt, CO.nombre, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         "& _ 
-                "MU.NOMBRE, ES.NOMBRE, P.Telefono, P.Celular, C.nombre, C.CCT, NI.descripcion, T."& _ 
-                "descripcion, M.materia, PU.descripcion, FU.Descripcion, H.idMateria, PL.HD, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"  "& _ 
-                "                       PL.HA, P.Id_Personal, H.Grupo,H.grado,m.horas,m.agrupacio"& _ 
-                "n"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY C.idNivel, CT, P.Apellido_Paterno, P.Apellido_Materno, P.Nombre"
+                "'') AS Materia, ISNULL(H.Grado, '') AS grado, ISNULL(H.Grupo, '') AS grupo, MAX("& _ 
+                "PL.grupos) AS grupoP, MAX(PL.grados) AS gradoP,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                             (S"& _ 
+                "ELECT        COUNT(idMateria) AS Expr1"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                               FROM     "& _ 
+                "       horarios"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                               WHERE        (idPlantilla = PL.i"& _ 
+                "dPlantilla) AND (idMateria = H.idMateria) AND (Grupo = H.Grupo)) AS Horas, PL.HD"& _ 
+                ", PL.HA, ISNULL(PU.descripcion, 'SIN PUESTO') "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         AS Pues"& _ 
+                "to, ISNULL(FU.Descripcion, 'NO ESPECIFICA') AS Funcion, ISNULL(M.horas, '') AS c"& _ 
+                "arga, ISNULL(M.agrupacion, '') AS Agrupacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Personal AS P INNE"& _ 
+                "R JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         plantillas AS PL ON P.Id_Personal = PL.idPerson"& _ 
+                "al INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         CT AS C ON C.IdCT = PL.idCCT INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         turnos AS T ON T.idTurno = C.idTurno LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                "                         horarios AS H ON H.idPlantilla = PL.idPlantilla LEFT OU"& _ 
+                "TER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         materias AS M ON M.id_materia = H.idMateria L"& _ 
+                "EFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         colonia AS CO ON CO.id_colonia = P.Id_C"& _ 
+                "olonia LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         municipio AS MU ON MU.ID_MUNICI"& _ 
+                "PIO = P.Id_Localidad LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         estados AS ES ON "& _ 
+                "ES.ID_ESTADO = MU.ID_ESTADO LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         puestos AS"& _ 
+                " PU ON PU.idPuesto = PL.idPuesto LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         funci"& _ 
+                "ones AS FU ON FU.idFuncion = PL.idFuncion LEFT OUTER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                     "& _ 
+                "    niveles AS NI ON NI.idNivel = C.idNivel"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (C.IdCT = @idCt)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROU"& _ 
+                "P BY C.idNivel, PL.idPlantilla, P.Ficha, ISNULL(P.RFC, ''), P.CURP, P.Apellido_P"& _ 
+                "aterno, P.Apellido_Materno, P.Nombre, P.Domicilio, P.numExt, P.numInt, CO.nombre"& _ 
+                ", "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         MU.NOMBRE, ES.NOMBRE, P.Telefono, P.Celular, C.nomb"& _ 
+                "re, C.CCT, NI.descripcion, T.descripcion, M.materia, PU.descripcion, FU.Descripc"& _ 
+                "ion, H.idMateria, PL.HD, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         PL.HA, P.Id_Personal, H.Grup"& _ 
+                "o, H.Grado, M.horas, M.agrupacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY C.idNivel, CT, P.Apellido_Paterno, P"& _ 
+                ".Apellido_Materno, P.Nombre"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCT", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 0, 0, "IdCT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCt", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 0, 0, "IdCT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As plantillas.plantillaDataTable, ByVal idCT As Short) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As plantillas.plantillaDataTable, ByVal idCt As Short) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCT,Short)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCt,Short)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
             End If
@@ -3196,9 +3870,9 @@ Namespace plantillasTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal idCT As Short) As plantillas.plantillaDataTable
+        Public Overloads Overridable Function GetData(ByVal idCt As Short) As plantillas.plantillaDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCT,Short)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCt,Short)
             Dim dataTable As plantillas.plantillaDataTable = New plantillas.plantillaDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -3646,6 +4320,196 @@ Namespace plantillasTableAdapters
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCT,Short)
             Dim dataTable As plantillas.horarioCTDataTable = New plantillas.horarioCTDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class estadisticasMaestrosTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "estadisticasMaestros"
+            tableMapping.ColumnMappings.Add("grados", "grados")
+            tableMapping.ColumnMappings.Add("grupos", "grupos")
+            tableMapping.ColumnMappings.Add("ngrupos", "ngrupos")
+            tableMapping.ColumnMappings.Add("egrados", "egrados")
+            tableMapping.ColumnMappings.Add("Nombre", "Nombre")
+            tableMapping.ColumnMappings.Add("Apellido_Paterno", "Apellido_Paterno")
+            tableMapping.ColumnMappings.Add("Apellido_Materno", "Apellido_Materno")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.sidep.My.MySettings.Default.ISENCOConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT        PL.grados, PL.grupos,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                             (SELECT        "& _ 
+                "PL.grados"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                               FROM            estadisticas_CCT AS E"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                               WHERE        (idCt = PL.idCCT) AND (idGrado = CA"& _ 
+                "ST(PL.grados AS integer))) AS egrados,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                             (SELECT    "& _ 
+                "    nGrupos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                               FROM            estadisticas_CCT AS "& _ 
+                "E"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                               WHERE        (idCt = PL.idCCT) AND (idGrado = "& _ 
+                "CAST(PL.grados AS integer))) AS ngrupos, P.Nombre, P.Apellido_Paterno, P.Apellid"& _ 
+                "o_Materno"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            plantillas AS PL INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                        "& _ 
+                " Personal AS P ON P.Id_Personal = PL.idPersonal"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (PL.idCCT = @idCT)"& _ 
+                " AND (LEN(PL.grados) = 1) AND (LEN(PL.grupos) = 1)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY PL.grados"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCT", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idCCT", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As plantillas.estadisticasMaestrosDataTable, ByVal idCT As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCT,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData(ByVal idCT As Integer) As plantillas.estadisticasMaestrosDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idCT,Integer)
+            Dim dataTable As plantillas.estadisticasMaestrosDataTable = New plantillas.estadisticasMaestrosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function

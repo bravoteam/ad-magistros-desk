@@ -23,60 +23,44 @@ Partial Class imprimirPlantillaFrm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource5 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Dim ReportDataSource6 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.plantillaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.plantillas = New sidep.plantillas()
-        Me.estadisticas_CCTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource3 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.plantillaTableAdapter = New sidep.plantillasTableAdapters.plantillaTableAdapter()
-        Me.estadisticas_CCTTableAdapter = New sidep.plantillasTableAdapters.estadisticas_CCTTableAdapter()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.OpcionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImprimirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.plantillaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.plantillas = New sidep.plantillas()
+        Me.estadisticas_CCTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.plantillaTableAdapter = New sidep.plantillasTableAdapters.plantillaTableAdapter()
+        Me.estadisticas_CCTTableAdapter = New sidep.plantillasTableAdapters.estadisticas_CCTTableAdapter()
+        Me.estadisticasMaestrosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.estadisticasMaestrosTableAdapter = New sidep.plantillasTableAdapters.estadisticasMaestrosTableAdapter()
+        Me.MenuStrip1.SuspendLayout()
         CType(Me.plantillaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.plantillas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.estadisticas_CCTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
+        CType(Me.estadisticasMaestrosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'plantillaBindingSource
-        '
-        Me.plantillaBindingSource.DataMember = "plantilla"
-        Me.plantillaBindingSource.DataSource = Me.plantillas
-        '
-        'plantillas
-        '
-        Me.plantillas.DataSetName = "plantillas"
-        Me.plantillas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'estadisticas_CCTBindingSource
-        '
-        Me.estadisticas_CCTBindingSource.DataMember = "estadisticas_CCT"
-        Me.estadisticas_CCTBindingSource.DataSource = Me.plantillas
         '
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource5.Name = "DataSet1"
-        ReportDataSource5.Value = Me.plantillaBindingSource
-        ReportDataSource6.Name = "DataSet2"
-        ReportDataSource6.Value = Me.estadisticas_CCTBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource5)
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource6)
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.plantillaBindingSource
+        ReportDataSource2.Name = "DataSet2"
+        ReportDataSource2.Value = Me.estadisticas_CCTBindingSource
+        ReportDataSource3.Name = "DataSet3"
+        ReportDataSource3.Value = Me.estadisticasMaestrosBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource3)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "sidep.plantilla.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 24)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(1187, 558)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'plantillaTableAdapter
-        '
-        Me.plantillaTableAdapter.ClearBeforeFill = True
-        '
-        'estadisticas_CCTTableAdapter
-        '
-        Me.estadisticas_CCTTableAdapter.ClearBeforeFill = True
         '
         'MenuStrip1
         '
@@ -97,8 +81,40 @@ Partial Class imprimirPlantillaFrm
         'ImprimirToolStripMenuItem
         '
         Me.ImprimirToolStripMenuItem.Name = "ImprimirToolStripMenuItem"
-        Me.ImprimirToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ImprimirToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
         Me.ImprimirToolStripMenuItem.Text = "Imprimir"
+        '
+        'plantillaBindingSource
+        '
+        Me.plantillaBindingSource.DataMember = "plantilla"
+        Me.plantillaBindingSource.DataSource = Me.plantillas
+        '
+        'plantillas
+        '
+        Me.plantillas.DataSetName = "plantillas"
+        Me.plantillas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'estadisticas_CCTBindingSource
+        '
+        Me.estadisticas_CCTBindingSource.DataMember = "estadisticas_CCT"
+        Me.estadisticas_CCTBindingSource.DataSource = Me.plantillas
+        '
+        'plantillaTableAdapter
+        '
+        Me.plantillaTableAdapter.ClearBeforeFill = True
+        '
+        'estadisticas_CCTTableAdapter
+        '
+        Me.estadisticas_CCTTableAdapter.ClearBeforeFill = True
+        '
+        'estadisticasMaestrosBindingSource
+        '
+        Me.estadisticasMaestrosBindingSource.DataMember = "estadisticasMaestros"
+        Me.estadisticasMaestrosBindingSource.DataSource = Me.plantillas
+        '
+        'estadisticasMaestrosTableAdapter
+        '
+        Me.estadisticasMaestrosTableAdapter.ClearBeforeFill = True
         '
         'imprimirPlantillaFrm
         '
@@ -111,11 +127,12 @@ Partial Class imprimirPlantillaFrm
         Me.Name = "imprimirPlantillaFrm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Impresion de Plantilla"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         CType(Me.plantillaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.plantillas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.estadisticas_CCTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        CType(Me.estadisticasMaestrosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -129,4 +146,6 @@ Partial Class imprimirPlantillaFrm
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents OpcionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ImprimirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents estadisticasMaestrosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents estadisticasMaestrosTableAdapter As sidep.plantillasTableAdapters.estadisticasMaestrosTableAdapter
 End Class

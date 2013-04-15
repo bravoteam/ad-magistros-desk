@@ -2,24 +2,24 @@
 <xs:schema id="plantillas" targetNamespace="http://tempuri.org/plantillas.xsd" xmlns:mstns="http://tempuri.org/plantillas.xsd" xmlns="http://tempuri.org/plantillas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SIDEPConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SIDEPConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.sidep.My.MySettings.GlobalReference.Default.SIDEPConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ISENCOConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ISENCOConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.sidep.My.MySettings.GlobalReference.Default.ISENCOConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="plantillaTableAdapter" GeneratorDataComponentClassName="plantillaTableAdapter" Name="plantilla" UserDataComponentName="plantillaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="SIDEPConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ISENCOConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        P.Id_Personal, P.Ficha, ISNULL(P.RFC, '') AS RFC, P.CURP, P.Apellido_Paterno, P.Apellido_Materno, P.Nombre, P.Domicilio, P.numExt, P.numInt, ISNULL(CO.nombre, 
                          '') AS Colonia, MU.NOMBRE AS Municipio, ES.NOMBRE AS Estado, P.Telefono, P.Celular, C.nombre AS CT, C.CCT, NI.descripcion AS Nivel, T.descripcion AS Turno, 
-                         ISNULL(M.materia, '') AS Materia, isnull(H.grado,'') as grado, ISNULL(H.Grupo, '') AS grupo,
+                         ISNULL(M.materia, '') AS Materia, ISNULL(H.Grado, '') AS grado, ISNULL(H.Grupo, '') AS grupo, MAX(PL.grupos) AS grupoP, MAX(PL.grados) AS gradoP,
                              (SELECT        COUNT(idMateria) AS Expr1
                                FROM            horarios
                                WHERE        (idPlantilla = PL.idPlantilla) AND (idMateria = H.idMateria) AND (Grupo = H.Grupo)) AS Horas, PL.HD, PL.HA, ISNULL(PU.descripcion, 'SIN PUESTO') 
-                         AS Puesto, ISNULL(FU.Descripcion, 'NO ESPECIFICA') AS Funcion, isnull(M.horas,'') as carga,
-                         isnull(M.agrupacion,'') as Agrupacion
+                         AS Puesto, ISNULL(FU.Descripcion, 'NO ESPECIFICA') AS Funcion, ISNULL(M.horas, '') AS carga, ISNULL(M.agrupacion, '') AS Agrupacion
 FROM            Personal AS P INNER JOIN
                          plantillas AS PL ON P.Id_Personal = PL.idPersonal INNER JOIN
                          CT AS C ON C.IdCT = PL.idCCT INNER JOIN
@@ -32,13 +32,13 @@ FROM            Personal AS P INNER JOIN
                          puestos AS PU ON PU.idPuesto = PL.idPuesto LEFT OUTER JOIN
                          funciones AS FU ON FU.idFuncion = PL.idFuncion LEFT OUTER JOIN
                          niveles AS NI ON NI.idNivel = C.idNivel
-WHERE        (C.IdCT = @idCT)
+WHERE        (C.IdCT = @idCt)
 GROUP BY C.idNivel, PL.idPlantilla, P.Ficha, ISNULL(P.RFC, ''), P.CURP, P.Apellido_Paterno, P.Apellido_Materno, P.Nombre, P.Domicilio, P.numExt, P.numInt, CO.nombre, 
                          MU.NOMBRE, ES.NOMBRE, P.Telefono, P.Celular, C.nombre, C.CCT, NI.descripcion, T.descripcion, M.materia, PU.descripcion, FU.Descripcion, H.idMateria, PL.HD, 
-                         PL.HA, P.Id_Personal, H.Grupo,H.grado,m.horas,m.agrupacion
+                         PL.HA, P.Id_Personal, H.Grupo, H.Grado, M.horas, M.agrupacion
 ORDER BY C.idNivel, CT, P.Apellido_Paterno, P.Apellido_Materno, P.Nombre</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="idCT" ColumnName="IdCT" DataSourceName="SIDEP.dbo.CT" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@idCT" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="IdCT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="idCt" ColumnName="IdCT" DataSourceName="SIDEP.dbo.CT" DataTypeServer="smallint" DbType="Int16" Direction="Input" ParameterName="@idCt" Precision="0" ProviderType="SmallInt" Scale="0" Size="2" SourceColumn="IdCT" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </SelectCommand>
@@ -74,6 +74,8 @@ ORDER BY C.idNivel, CT, P.Apellido_Paterno, P.Apellido_Materno, P.Nombre</Comman
               <Mapping SourceColumn="grado" DataSetColumn="grado" />
               <Mapping SourceColumn="carga" DataSetColumn="carga" />
               <Mapping SourceColumn="Agrupacion" DataSetColumn="Agrupacion" />
+              <Mapping SourceColumn="grupoP" DataSetColumn="grupoP" />
+              <Mapping SourceColumn="gradoP" DataSetColumn="gradoP" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -153,6 +155,40 @@ WHERE        (CT.IdCT = @idCT)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="estadisticasMaestrosTableAdapter" GeneratorDataComponentClassName="estadisticasMaestrosTableAdapter" Name="estadisticasMaestros" UserDataComponentName="estadisticasMaestrosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ISENCOConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        PL.grados, PL.grupos,
+                             (SELECT        PL.grados
+                               FROM            estadisticas_CCT AS E
+                               WHERE        (idCt = PL.idCCT) AND (idGrado = CAST(PL.grados AS integer))) AS egrados,
+                             (SELECT        nGrupos
+                               FROM            estadisticas_CCT AS E
+                               WHERE        (idCt = PL.idCCT) AND (idGrado = CAST(PL.grados AS integer))) AS ngrupos, P.Nombre, P.Apellido_Paterno, P.Apellido_Materno
+FROM            plantillas AS PL INNER JOIN
+                         Personal AS P ON P.Id_Personal = PL.idPersonal
+WHERE        (PL.idCCT = @idCT) AND (LEN(PL.grados) = 1) AND (LEN(PL.grupos) = 1)
+ORDER BY PL.grados</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="idCT" ColumnName="idCCT" DataSourceName="SIDEP.dbo.plantillas" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idCT" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="idCCT" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="grados" DataSetColumn="grados" />
+              <Mapping SourceColumn="grupos" DataSetColumn="grupos" />
+              <Mapping SourceColumn="ngrupos" DataSetColumn="ngrupos" />
+              <Mapping SourceColumn="egrados" DataSetColumn="egrados" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Apellido_Paterno" DataSetColumn="Apellido_Paterno" />
+              <Mapping SourceColumn="Apellido_Materno" DataSetColumn="Apellido_Materno" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -161,7 +197,7 @@ WHERE        (CT.IdCT = @idCT)</CommandText>
   <xs:element name="plantillas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="plantillas" msprop:Generator_UserDSName="plantillas">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="plantilla" msprop:Generator_TableClassName="plantillaDataTable" msprop:Generator_TableVarName="tableplantilla" msprop:Generator_TablePropName="plantilla" msprop:Generator_RowDeletingName="plantillaRowDeleting" msprop:Generator_UserTableName="plantilla" msprop:Generator_RowChangingName="plantillaRowChanging" msprop:Generator_RowEvHandlerName="plantillaRowChangeEventHandler" msprop:Generator_RowDeletedName="plantillaRowDeleted" msprop:Generator_RowEvArgName="plantillaRowChangeEvent" msprop:Generator_RowChangedName="plantillaRowChanged" msprop:Generator_RowClassName="plantillaRow">
+        <xs:element name="plantilla" msprop:Generator_TableClassName="plantillaDataTable" msprop:Generator_TableVarName="tableplantilla" msprop:Generator_RowChangedName="plantillaRowChanged" msprop:Generator_TablePropName="plantilla" msprop:Generator_RowDeletingName="plantillaRowDeleting" msprop:Generator_RowChangingName="plantillaRowChanging" msprop:Generator_RowEvHandlerName="plantillaRowChangeEventHandler" msprop:Generator_RowDeletedName="plantillaRowDeleted" msprop:Generator_RowClassName="plantillaRow" msprop:Generator_UserTableName="plantilla" msprop:Generator_RowEvArgName="plantillaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Apellido_Paterno" msprop:Generator_ColumnVarNameInTable="columnApellido_Paterno" msprop:Generator_ColumnPropNameInRow="Apellido_Paterno" msprop:Generator_ColumnPropNameInTable="Apellido_PaternoColumn" msprop:Generator_UserColumnName="Apellido_Paterno" minOccurs="0">
@@ -349,10 +385,24 @@ WHERE        (CT.IdCT = @idCT)</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="grupoP" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columngrupoP" msprop:Generator_ColumnPropNameInRow="grupoP" msprop:Generator_ColumnPropNameInTable="grupoPColumn" msprop:Generator_UserColumnName="grupoP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="gradoP" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columngradoP" msprop:Generator_ColumnPropNameInRow="gradoP" msprop:Generator_ColumnPropNameInTable="gradoPColumn" msprop:Generator_UserColumnName="gradoP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="estadisticas_CCT" msprop:Generator_TableClassName="estadisticas_CCTDataTable" msprop:Generator_TableVarName="tableestadisticas_CCT" msprop:Generator_TablePropName="estadisticas_CCT" msprop:Generator_RowDeletingName="estadisticas_CCTRowDeleting" msprop:Generator_UserTableName="estadisticas_CCT" msprop:Generator_RowChangingName="estadisticas_CCTRowChanging" msprop:Generator_RowEvHandlerName="estadisticas_CCTRowChangeEventHandler" msprop:Generator_RowDeletedName="estadisticas_CCTRowDeleted" msprop:Generator_RowEvArgName="estadisticas_CCTRowChangeEvent" msprop:Generator_RowChangedName="estadisticas_CCTRowChanged" msprop:Generator_RowClassName="estadisticas_CCTRow">
+        <xs:element name="estadisticas_CCT" msprop:Generator_TableClassName="estadisticas_CCTDataTable" msprop:Generator_TableVarName="tableestadisticas_CCT" msprop:Generator_RowChangedName="estadisticas_CCTRowChanged" msprop:Generator_TablePropName="estadisticas_CCT" msprop:Generator_RowDeletingName="estadisticas_CCTRowDeleting" msprop:Generator_RowChangingName="estadisticas_CCTRowChanging" msprop:Generator_RowEvHandlerName="estadisticas_CCTRowChangeEventHandler" msprop:Generator_RowDeletedName="estadisticas_CCTRowDeleted" msprop:Generator_RowClassName="estadisticas_CCTRow" msprop:Generator_UserTableName="estadisticas_CCT" msprop:Generator_RowEvArgName="estadisticas_CCTRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idEstadisticas" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidEstadisticas" msprop:Generator_ColumnPropNameInRow="idEstadisticas" msprop:Generator_ColumnPropNameInTable="idEstadisticasColumn" msprop:Generator_UserColumnName="idEstadisticas" type="xs:long" />
@@ -365,7 +415,7 @@ WHERE        (CT.IdCT = @idCT)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="horarioCT" msprop:Generator_TableClassName="horarioCTDataTable" msprop:Generator_TableVarName="tablehorarioCT" msprop:Generator_TablePropName="horarioCT" msprop:Generator_RowDeletingName="horarioCTRowDeleting" msprop:Generator_UserTableName="horarioCT" msprop:Generator_RowChangingName="horarioCTRowChanging" msprop:Generator_RowEvHandlerName="horarioCTRowChangeEventHandler" msprop:Generator_RowDeletedName="horarioCTRowDeleted" msprop:Generator_RowEvArgName="horarioCTRowChangeEvent" msprop:Generator_RowChangedName="horarioCTRowChanged" msprop:Generator_RowClassName="horarioCTRow">
+        <xs:element name="horarioCT" msprop:Generator_TableClassName="horarioCTDataTable" msprop:Generator_TableVarName="tablehorarioCT" msprop:Generator_RowChangedName="horarioCTRowChanged" msprop:Generator_TablePropName="horarioCT" msprop:Generator_RowDeletingName="horarioCTRowDeleting" msprop:Generator_RowChangingName="horarioCTRowChanging" msprop:Generator_RowEvHandlerName="horarioCTRowChangeEventHandler" msprop:Generator_RowDeletedName="horarioCTRowDeleted" msprop:Generator_RowClassName="horarioCTRow" msprop:Generator_UserTableName="horarioCT" msprop:Generator_RowEvArgName="horarioCTRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="carga" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncarga" msprop:Generator_ColumnPropNameInRow="carga" msprop:Generator_ColumnPropNameInTable="cargaColumn" msprop:Generator_UserColumnName="carga" type="xs:int" minOccurs="0" />
@@ -443,6 +493,55 @@ WHERE        (CT.IdCT = @idCT)</CommandText>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="estadisticasMaestros" msprop:Generator_TableClassName="estadisticasMaestrosDataTable" msprop:Generator_TableVarName="tableestadisticasMaestros" msprop:Generator_TablePropName="estadisticasMaestros" msprop:Generator_RowDeletingName="estadisticasMaestrosRowDeleting" msprop:Generator_RowChangingName="estadisticasMaestrosRowChanging" msprop:Generator_RowEvHandlerName="estadisticasMaestrosRowChangeEventHandler" msprop:Generator_RowDeletedName="estadisticasMaestrosRowDeleted" msprop:Generator_UserTableName="estadisticasMaestros" msprop:Generator_RowChangedName="estadisticasMaestrosRowChanged" msprop:Generator_RowEvArgName="estadisticasMaestrosRowChangeEvent" msprop:Generator_RowClassName="estadisticasMaestrosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grados" msprop:Generator_ColumnVarNameInTable="columngrados" msprop:Generator_ColumnPropNameInRow="grados" msprop:Generator_ColumnPropNameInTable="gradosColumn" msprop:Generator_UserColumnName="grados">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="grupos" msprop:Generator_ColumnVarNameInTable="columngrupos" msprop:Generator_ColumnPropNameInRow="grupos" msprop:Generator_ColumnPropNameInTable="gruposColumn" msprop:Generator_UserColumnName="grupos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ngrupos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnngrupos" msprop:Generator_ColumnPropNameInRow="ngrupos" msprop:Generator_ColumnPropNameInTable="ngruposColumn" msprop:Generator_UserColumnName="ngrupos" type="xs:long" minOccurs="0" />
+              <xs:element name="egrados" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnegrados" msprop:Generator_ColumnPropNameInRow="egrados" msprop:Generator_ColumnPropNameInTable="egradosColumn" msprop:Generator_UserColumnName="egrados" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido_Paterno" msprop:Generator_ColumnVarNameInTable="columnApellido_Paterno" msprop:Generator_ColumnPropNameInRow="Apellido_Paterno" msprop:Generator_ColumnPropNameInTable="Apellido_PaternoColumn" msprop:Generator_UserColumnName="Apellido_Paterno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="155" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apellido_Materno" msprop:Generator_ColumnVarNameInTable="columnApellido_Materno" msprop:Generator_ColumnPropNameInRow="Apellido_Materno" msprop:Generator_ColumnPropNameInTable="Apellido_MaternoColumn" msprop:Generator_UserColumnName="Apellido_Materno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="155" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
